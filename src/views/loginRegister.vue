@@ -10,7 +10,8 @@
 						<input type="password" placeholder="密码" v-model="form.userpwd">
 						<span class="errTips" v-if="emailError">* 密码填写错误 *</span>
 					</div>
-					<button class="bbutton" @click="login">登录</button>
+					<!-- 登录按钮 -->
+					 <router-link to='homepage.vue' class="jos"><button class="bbutton" @click="login">登录</button></router-link>   
 				</div>
 				<div class="big-contain" v-else>
 					<div class="btitle">创建账户</div>
@@ -77,6 +78,7 @@
 						switch(res.data){
 							case 0: 
 								alert("登陆成功！");
+								 
 								break;
 							case -1:
 								this.emailError = true;
@@ -193,7 +195,8 @@
 		padding-left: 2em;
 		background-color: #f0f0f0;
 	}
-	.bbutton{
+	.bbutton,
+	.jos{
 		width: 20%;
 		height: 40px;
 		border-radius: 24px;

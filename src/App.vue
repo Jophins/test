@@ -11,3 +11,10 @@
 		background-color: #f5f5f5;
 	}
 </style>
+<script>
+import login from './views/loginRegister.vue'
+
+export default {
+	
+}
+</script>
